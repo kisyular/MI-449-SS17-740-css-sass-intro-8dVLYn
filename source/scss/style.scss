@@ -1,0 +1,61 @@
+@import "_variable";
+
+
+input[type="text"], textarea, {
+  font-size: $font-base-size * 0.5;
+  font-family: $serif-fonts;
+  color: $inputTagColors;
+}
+img, input[type="text"], input[type="password"], textarea {
+  border-radius: $border-radius;
+}
+
+figcaption {
+  font-size: $font-base-size * 0.45;
+  color: $figTagColors;
+}
+p {
+  font-size: $font-base-size * 0.85;
+  a {
+    font-size: $font-base-size * 0.5;
+  }
+}
+a {
+  font-size: $font-base-size * 0.75;
+}
+h1 {
+  font-size: $font-base-size * 1.00;
+}
+h2 {
+  font-size: $font-base-size * 0.90;
+}
+h3 {
+  font-size: $font-base-size * 0.80;
+}
+h4 {
+  font-size: $font-base-size * 0.70;
+}
+h5 {
+  font-size: $font-base-size * 0.60;
+}
+h6 {
+  font-size: $font-base-size * 0.50;
+}
+input [type="radio"]{
+}
+
+body {
+  background-color: lighten($inputTagColors, 50%);
+}
+
+.button {
+  color: $inputTagColors;
+  border-color: $inputTagColors;
+}
+table {
+  font-size: $font-base-size * 0.45;
+  border: 2px solid $tableBorder;
+  td {
+    border: 2px solid $rowBorder;
+  }
+}
