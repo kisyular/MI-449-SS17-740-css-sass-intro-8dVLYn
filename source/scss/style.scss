@@ -1,87 +1,93 @@
 @import "_variable";
 
-input[type="text"],
-textarea {
-    font-size  : $font-base-size * 0.5;
-    font-family: $serif-fonts;
-    color      : $inputTagColors;
+* {
+  font-family: $serif-fonts;
 }
 
-img,
-input[type="password"],
-input[type="text"],
-textarea {
-    border-radius: $border-radius;
-}
-
-figcaption {
+figure {
+  figcaption {
     font-size: $font-base-size * 0.45;
-    color    : $figTagColors;
-}
+    color: $figTagColors;
+  }
 
+  img {
+    border-radius: $border-radius;
+    border: solid $hTagColors 2px;
+  }
+}
+//All elements under P Tag are Nested together
 p {
-    font-size: $font-base-size * 0.85;
-    color    : $pTagColors;
+  font-size: $font-base-size * 0.85;
+  color: $pTagColors;
 
-    a {
-        font-size: $font-base-size * 0.5;
+  a {
+    font-size: $font-base-size * 0.5;
+  }
+
+  input,
+  textarea {
+    font-size: $font-base-size * 0.5;
+    font-family: $serif-fonts;
+    color: $inputTagColors;
+    border-radius: $border-radius;
+    border: solid $hTagColors 2px;
+
+    &[type="button"],
+    &[type="password"],
+    &[type="text"],
+    &[type="checkbox"] {
+      border-radius: $border-radius;
+
+      &.danger {
+        background-color: red;
+      }
     }
-}
+  }
+}// end of P nested styles
 
 a {
-    font-size: $font-base-size * 0.75;
+  font-size: $font-base-size * 0.75;
 }
 
 h1,
 h2,
 h5 {
-    color: $hTagColors;
+  color: $hTagColors;
 }
 
 h1 {
-    font-size: $font-base-size * 1.0;
+  font-size: $font-base-size * 1;
 }
 
 h2 {
-    font-size: $font-base-size * 0.9;
+  font-size: $font-base-size * 0.9;
 }
 
 h3 {
-    font-size: $font-base-size * 0.8;
+  font-size: $font-base-size * 0.8;
 }
 
 h4 {
-    font-size: $font-base-size * 0.7;
+  font-size: $font-base-size * 0.7;
 }
 
 h5 {
-    font-size: $font-base-size * 0.6;
+  font-size: $font-base-size * 0.6;
 }
 
 h6 {
-    font-size: $font-base-size * 0.5;
+  font-size: $font-base-size * 0.5;
 }
-
-input [type="radio"] {}
 
 body {
-    background-color: lighten($bodyTagColors, 50%);
-}
-
-* {
-    font-family: $serif-fonts;
-}
-
-.button {
-    color       : $inputTagColors;
-    border-color: $inputTagColors;
+  background-color: lighten($bodyTagColors, 70%);
 }
 
 table {
-    font-size: $font-base-size * 0.45;
-    border   : 2px solid $tableBorder;
+  font-size: $font-base-size * 0.45;
+  border: 2px solid $tableBorder;
 
-    td {
-        border: 2px solid $rowBorder;
-    }
+  td {
+    border: 2px solid $rowBorder;
+  }
 }
